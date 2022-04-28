@@ -1,2 +1,0 @@
-# BU
-web-folder 
