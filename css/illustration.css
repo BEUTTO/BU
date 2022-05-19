@@ -29,7 +29,7 @@ main{
 .test{
   flex-shrink:0;
   overflow:hidden;
-  height:auto;
+  height:100%;
   width:auto;
 
 }

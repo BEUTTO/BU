@@ -2,62 +2,120 @@ main{
 	height:100vh;
 	width:100vw;
 }
-
+.name-title{
+	color: white;
+    position: relative;
+    top: 100px;
+    left: 100px;
+    font-size: 2rem;
+}
 .info{
-	position: relative;
-    justify-content: center;
+	justify-content: center;
     top: 150px;
     display: flex;
     width: 100vw;
-    padding: 16px;
+    padding: 20px;
     flex-direction: column;
     align-items: center;
     align-content: center;
-	color:#828282;
-	font-family: Neue Haas Unica W1G,sans-serif;
+    color: #828282;
+    font-family: Neue Haas Unica W1G,sans-serif;
+    height: 100vh;
 }
-#job-title{
-	color:#d6d6d6;
-	font-size:1.3rem;
-	padding-bottom:10px;
+.container{
+    display: flex;
+    position: fixed;
+    align-items: center;
+    top: 40px;
+    width: 100%;
+    justify-content: center;
+    color: grey;
+}
+
+.title{
+    font-size: 3rem;
+    text-align: start;
+    line-height: 40px;
+    font-family: Neue Haas Unica W1G,sans-serif;
+}
+
+.name1{
+    padding-left: 20px;
+    text-align: start;
+    letter-spacing: 2px;
+    padding-top: 0px;
+    font-size: 0.8rem;
+    line-height: 19px;
 }
 #main-info{
-	font-size:1.6rem;
-	font-style: italic;
+	font-size: 1rem;
+    font-style: italic;
     font-weight: lighter;
+    color: #777777;
+    line-height: 150%;
+    width: min(800px, 90%, 60vw);
+    vertical-align: middle;
 }
 .contacts{
-	padding-top: 30px;
-    text-align: left;
+	padding-top: 25px;
+    width: min(800px, 90%, 60vw);
 }
 
 .skills-c{
-	left:0;
-	position:relative;
-	padding-top:80px;
+	left: 0;
+    position: relative;
+    padding-top: 30px;
+    text-align: center;
+
 }
 #skill-title{
-	color:#e7e7e7;
-	font-size:1.2rem;
-	padding:5px;
-	text-align:center;
+	color: #e7e7e7;
+    font-size: .9rem;
+    padding: 5px;
+    text-align: center;
+    letter-spacing: 2px;
 }
 #skill-icons{
 
 }
 #email{
-	color:#dfdfdf;
+	color: #919191;
+    padding-bottom: 7px;
+    /* letter-spacing: 2px; */
+    font-style: italic;
+    font-size: 0.8rem;
+    text-align: start;
+}
+
+#dropmail{
+    color: #bcbcbc;
+    display: none;
+    padding-top: 50px;
+    padding-left: 20px;
 }
 
 @media (max-width: 800px) {
 .info{
-	top:50px;
-	text-align: center;
+	top:100px;
+    padding:18px;
  }
 #main-info {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
+    width:auto;
  }
 #job-title{
 	padding-bottom:50px;
  }
+ .contacts{
+    width:auto;
+ }
+#dropmail{
+    display:block;
+}
+.title{
+    font-size:calc(2rem + 1vw);
+}
+.name1{
+    padding-left:10px;
+}
 }
