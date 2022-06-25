@@ -30,6 +30,8 @@ main{
     width: 100%;
     justify-content: center;
     color: grey;
+    user-select:none;
+    -webkit-user-select:none;
 }
 
 .title{
@@ -66,18 +68,18 @@ main{
     position: relative;
     padding-top: 30px;
     text-align: center;
+    user-select:none;
+    -webkit-user-select:none;
 
 }
-#skill-title{
-	color: #e7e7e7;
-    font-size: .9rem;
+#software{
+	color: #c2c1c1;
+    font-size: 0.6rem;
     padding: 5px;
     text-align: center;
     letter-spacing: 2px;
 }
-#skill-icons{
 
-}
 #email{
 	color: #919191;
     padding-bottom: 7px;
@@ -85,13 +87,6 @@ main{
     font-style: italic;
     font-size: 0.8rem;
     text-align: start;
-}
-
-#dropmail{
-    color: #bcbcbc;
-    display: none;
-    padding-top: 50px;
-    padding-left: 20px;
 }
 
 @media (max-width: 800px) {
@@ -109,9 +104,6 @@ main{
  .contacts{
     width:auto;
  }
-#dropmail{
-    display:block;
-}
 .title{
     font-size:calc(2rem + 1vw);
 }
