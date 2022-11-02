@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>INFO</title>
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+
+  <style>
+   .timebox {
+         display: inline-flex;
+         color:grey;
+         font-family:calibri;
+         font-size: 3rem;
+         margin-top: 20px;
+    }
+
+   #UK{
+          padding-right:50px;
+   }
+   #UKTime , #UK {
+          font-weight:200;
+   }
+
+   .hero-section{
+           background-image: radial-gradient(#212121 5%, transparent 2%), radial-gradient(grey 5%, transparent 2%);
+           background-color: #252424;
+           background-position: 0 0, 50px 50px;
+           background-size: 10px 10px;
+           /*filter:blur(8px);*/
+           z-index: 0;
+   }
+   .hero-col{
+          padding: clamp(1rem, 8vw, 5rem);
+          max-width: 80%;
+          font-size: 10pt;
+          display:block;
+          line-height:30px;
+   }
+   .email{
+          color:#919191;
+          font-style: italic;
+          font-size: 0.8rem;
+          font-family:Neue Haas Unica W1G,sans-serif;
+   }
+   .section{
+          position: relative;
+          height: 100vh;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items:center;
+   }
+   .section p {
+        color: #C4C3C3;
+        font-size: 1.1rem;
+        font-family: calibri;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        font-weight:100;
+    }
+   .section h1{
+          font-size:1.3rem;
+          color:white;
+          font-family:Calibri;
+          font-weight: 5;
+          letter-spacing: 2px;
+   }
+   @media (max-width:757px){
+          .hero-col{
+                max-width:100%;
+                width: clamp(300px, 50vw, 600px);
+                padding:0;
+          }
+   }
+   * {
+     margin: 0;
+     padding: 0;
+     font-size: 100%;
+     vertical-align: baseline;
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     box-sizing: border-box;
+   }
+   </style>
+  </head>
+ <body>
+  <header class="header">
+   <div class="menu-btn">
+    <div class="menu-btn_lines"></div>
+    </div>
+   <ul class="menu-items">
+    <li><a href="index.html">ART</a></li>
+    <li><a href="3D.html">3D</a></li>
+    <li><a href="motion.html">MOTION</a></li>
+    <li><a href="about.html">info</a></li>
+    </ul>
+   </header>
+
+  <section class="section hero-section">
+   <div class="hero-col">
+    <h1>INNOVATION . PROBLEM SOLVING . ART</h1>
+    <p>"Benedict focuses on mixing multiple mediums to create innovation, <br>  bringing back craftmaship and expression in art using <br> visuals  .  characters  .  design </p>
+    <h2 class="email">benedettoku@gmail.com</h2>
+    <div class="timebox">
+     <h2 id="UK">UK</h2>
+     <h2 id="UKTime"></h2>
+     </div>
+    </div>
+   </section>
+  <div class="grain">
+   <img src="img/grain_texture.jpg" class="grain_img" alt="grain">
+   </div>
+  </body>
+ <script>
+  var getUKTime = function (){
+      document.getElementById("UKTime").innerHTML = new Date () .toLocaleString('en-GB',{timeZone:'Europe/London' , timeStyle:'medium',hourCycle:'h24'});
+  }
+  getUKTime();
+  setInterval(getUKTime,1000);
+  </script>
+</html>

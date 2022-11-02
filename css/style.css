@@ -1,161 +1,218 @@
-*{
-	margin:0;
-	padding:0;
-	font-size:100%;
-	vertical-align:baseline;
+﻿* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    text-decoration:none;
 }
-
-body,html{
-	min-height:100%!important;
-	min-width:100%!important;
+html{
+    font-size: 100%;
 }
-
+body, html {
+  min-width:100%!important;
+  min-height:100%!important;
+  overflow:hidden;
+}
 body{
-	background-color:#252424;
+  background-image: radial-gradient(#212121 5%, transparent 2%), radial-gradient(grey 5%, transparent 2%);
+  background-color: #252424;
+  background-position: 0 0, 50px 50px;
+  background-size: 10px 10px;
 }
-/* The container <div> - needed to position the dropdown content */
-nav {
-  position: fixed;
-  display: inline-block;
-  -webkit-user-select:none;
-  user-select:none;
-  z-index:20;
-}
-.dropdown{
-  position:relative;
-  margin-left:20px;
-  margin-top:10px;
-}
-.dropdown:hover .nav-links{
-  display:block;
-  }
-.n_logo {
-  background-color: red;
-  color: white;
-  padding: 16px;
-  font-size: 2rem;
-  border: none;
-  border-radius: 5%;
-}
-.logo {
-  text-decoration:none;
-  color:white;
-  font-weight:bolder;
-}
-.logo:hover {
-color: black;
-}
-.nav-links {
-    background-color:grey;
-    display:none;
+.grain_img{
+    z-index:-1;
     position:fixed;
-    border-radius: 0 5% 5% 5%;
 }
-.link-contain {
-    display: inline;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-family: "Unite", sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1;
-    letter-spacing: 0.05em;
-}
-.link-contain li {
-    text-transform: uppercase;
+.hero-section{
+  background-image: radial-gradient(#212121 5%, transparent 2%), radial-gradient(grey 5%, transparent 2%);
+  background-color: #252424;
+  background-position: 0 0, 50px 50px;
+  background-size: 10px 10px;
+  /*z-index: 0;*/
 }
 
-.nav-links li a {
-    display: block;
-    text-decoration: none;
-    color: white;
-    padding: 1rem;
-    opacity: .6;
-    transition: opacity .2s linear;
-}
-.nav-links li a:hover{
-    opacity:1;
+/*nav*/
+.menu-items {
+  align-items:center;
+  display: flex;
+  list-style:none;
 }
 
-.nav-links li:hover {
-    background-color: #555;
+.menu-items li a{
+  padding:0.5em 1em;
+  font-family:calibri;
+  transition:background 0.3s ease-in-out;
+}
+
+.header {
+  position:fixed;
+  top:0;
+  right:0;
+  /*left:0;*/
+  display:flex;
+  justify-content:flex-end;
+  padding: 1rem 2rem;
+  backdrop-filter: blur(5px);
+  z-index:1;
+  width:fit-content;
+}
+.header a {
+    color:white;
+    text-decoration:none;
+}
+.menu-items li a:hover{
+  color:grey;
+  background-color:#ccc7d3;
+}
+
+/* nav menu button*/
+
+.menu-btn{
+   position:relative;
+   display:none;
+   justify-content:center;
+   align-content:center;
+   padding-top: 10px;
+   width:3.5rem;
+   height:3.5rem;
+   cursor:pointer;
+   z-index:1;
 }
 
 
-.app-menu {
-    position: fixed;
-    bottom: 2rem;
-    left: 2rem;
-    visibility: hidden;
-    flex-direction: column;
-    justify-content: space-between;
-    text-decoration: none;
-    color: white;
-    z-index: 999;
-    background-color: red;
-    text-align: center;
-    font-size: 2rem;
-    width: 45px;
-    height: 45px;
-    border-radius:50%;
-    justify-content: center;
-    display: flex;
+.menu-btn_lines, .menu-btn_lines::before, .menu-btn_lines::after {
+   width:1.5rem;
+   height:0.15rem;
+   background-color:white;
+   transition: all 0.2s ease-in-out;
 }
-#dropmail{
-    color: #bcbcbc;
+
+.menu-btn_lines::before, .menu-btn_lines::after {
+    content:"";
+    position:absolute;
+}
+
+.menu-btn_lines::before {
+    transform: translateY(-0.5rem);
+}
+.menu-btn_lines::after {
+    transform: translateY(0.5rem);
+}
+
+/* animation */
+
+.menu-btn.open .menu-btn_lines{
+    transform: translateX(2rem);
+    background-color:transparent;
+}
+
+.menu-btn.open .menu-btn_lines::before {
+    transform: rotate(45deg) translate(-1.5rem, 1.5rem);
+    background-color:red;
+}
+
+.menu-btn.open .menu-btn_lines::after {
+    transform: rotate(-45deg) translate(-1.5rem, -1.5rem);
+    background-color:red;
+}
+
+/*SECTION/SLIDER*/
+.gallery{
+    background-color:grey;
+    display:inline-flex;
+    height:100%;
+    width:100%;
+    cursor:grab;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y:hidden;
+}
+.gallery::-webkit-scrollbar {
     display: none;
-    padding-top: 50px;
-    padding-left: 20px;
 }
-
-#app_home{
-    display:none;
+.gallery:active{
+    cursor:grabbing;
 }
-
-@media (max-width: 800px) {
-  .n_logo{
-    display:none;
-  }
-
-    .app-menu {
-        visibility:visible;
-    }
-
-    .nav-links li {
-      text-align: left;
-      line-height:4.3rem;
-    }
-
-    .nav-links  li a {
-        padding: .5rem 1rem;
-        font-size: calc(1.2rem + 2vw);
-    }
-
-    .nav-links.active {
-        display: flex;
-        height:100vh;
+   /*general section*/
+.section{
+        position:relative;
         width:100vw;
-        color:#250c0c;
+        height:100vh;
+        background-color:#252424;
+   }
+   .reel{
+         
+   }
+   .sizer{
+
+       height: 100%;
+       width: auto;
+   }
+   @media (max-width:757px) and (orientation:portrait){
+    .menu-btn{
+    display:flex;
     }
-    .link-contain{
-        position:fixed;
-        padding:20px;
-        left:0;
-        top:100px;
+    .menu-items{
         flex-direction:column;
+        justify-content: space-around;
+        position:absolute;
+        top:0;
+        right:0;
+        left:0;
+        height:100vh;
+        background-color:#252424;
+        transform: translateX(100vw);
+        transition: transform 0.22s ease-in-out;
+    }
+    .menu-items.open{
+        transform: translateX(0);
+    }
+
+    .menu-items li {
+        width: 100vw;
+        height: 100%;
+    }
+    .menu-items li a {
+        color:white;
+        font-size:5vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
         width:100%;
-  }
-  .dropdown{
-        margin:0px;
-  }
-  #dropmail{
-    display:block;
-  }
-  #app_home{
-    display:block;
-  }
+        height:100%;
+    }
+    .header{
+        width:auto;
+        left:0;
+        backdrop-filter: blur(0px);
+    }
+    iframe{
+	   position:relative;
+	   width:100vw;
+    }
+    .reel{
+        align-items:center;
+    }
+    
+    .sec{
+       position:relative;
+       display:flex;
+       align-items:center;
+       height:100vh;
+       width:100vw;
+    }
+    .gallery {
+      display:inline-flex;
+      height:100vh;
+      width:100vw;
+    }
+    .sizer{
+        width:100vw;
+        height:auto;
+    }
 }
