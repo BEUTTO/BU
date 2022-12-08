@@ -155,7 +155,7 @@ body{
    .sizer{
 
        height: 100%;
-       width: fit-content;
+       width: auto;
    }
    iframe{
 	   position:absolute;
