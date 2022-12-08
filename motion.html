@@ -16,15 +16,20 @@
           font-weight:lighter;
    }
    .reel{
-          position:fixed;
           display:inline-flex;
           flex-direction: column;
           flex-wrap: nowrap;
           align-items:center;
+          justify-content:flex-end;
           width:100vw;
+          height:100vh;
+          position:relative;
+
    }
    .info{
           display:inline-flex;
+          bottom:20px;
+          position:relative;
    }
 
    .des{
@@ -34,9 +39,7 @@
           letter-spacing: 2.8px;
           font-weight: lighter;
    }
-   .iframe{
-          margin-top: 60px;
-   }
+
   </style>
  </head>
  <body>
@@ -52,10 +55,10 @@
     </ul>
    </header>
    <section class="vid reel">
-    <iframe class="demo" src="https://player.vimeo.com/video/426269232?h=fcbff8f9b0" width="840" height="560" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-    <div class="info">
+    <iframe class="demo" src="https://player.vimeo.com/video/426269232?h=fcbff8f9b0&title=0&byline=0&portrait=0" frameborder="0" allowfullscreen></iframe>
+    <!--<div class="info">
      <div class ="dm_reel">DEMOREEL</div>
-     <div class="des"> Client/Private Work </div>
+     <div class="des"> Client/Private Work </div> -->
     </section>
    </body>
 </html>
