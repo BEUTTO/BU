@@ -137,6 +137,7 @@ body{
     -ms-overflow-style: none;
     scrollbar-width: none;
     overflow-y:hidden;
+    flex-wrap: nowrap;
 }
 .gallery::-webkit-scrollbar {
     display: none;
@@ -154,7 +155,7 @@ body{
    .sizer{
 
        height: 100%;
-       width: auto;
+       width: fit-content;
    }
    iframe{
 	   position:absolute;
@@ -169,7 +170,7 @@ body{
     }
     .menu-items{
         flex-direction:column;
-        justify-content: space-around;
+        /*justify-content: space-around;*/
         position:absolute;
         top:0;
         right:0;
@@ -178,6 +179,7 @@ body{
         background-color:#252424;
         transform: translateX(100vw);
         transition: transform 0.22s ease-in-out;
+        padding: 250px;
     }
     .menu-items.open{
         transform: translateX(0);
