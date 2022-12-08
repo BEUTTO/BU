@@ -40,10 +40,10 @@ body{
   display: flex;
   list-style:none;
   background-color: #394149;
-  filter: contrast(0.7);
+  /*filter: contrast(0.7);*/
   opacity: .95;
   border-radius: 5px;
-  backdrop-filter: blur(1px);
+  /*backdrop-filter: blur(1px);*/
 }
 
 .menu-items li a{
