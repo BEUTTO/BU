@@ -14,7 +14,8 @@
          color:grey;
          font-family:calibri;
          font-size: 3rem;
-         margin-top: 20px;
+         margin-top: 40px;
+         justify-content: center;
     }
 
    #UK{
@@ -40,10 +41,14 @@
           line-height:30px;
    }
    .email{
-          color:#919191;
+          color:#c3c3c3; /*#919192*/
           font-style: italic;
-          font-size: 0.8rem;
+          font-size: .9rem;
           font-family:Neue Haas Unica W1G,sans-serif;
+          display: grid;
+          justify-content: center;
+          justify-items: center;
+          
    }
    .section{
           position: relative;
@@ -57,8 +62,6 @@
         color: #C4C3C3;
         font-size: 1.1rem;
         font-family: calibri;
-        padding-top: 30px;
-        padding-bottom: 20px;
         font-weight:100;
     }
    .section h1{
@@ -68,6 +71,18 @@
           font-weight: 5;
           letter-spacing: 2px;
    }
+
+   .gen_info{
+          padding-top: 30px;
+          padding-bottom:20px;
+   }
+
+   .message_me{
+    padding-top: 10px;
+    padding-bottom: 5px;
+    text-align:center;
+}
+
    @media (max-width:757px){
           .hero-col{
                 max-width:100%;
@@ -92,22 +107,41 @@
     <div class="menu-btn_lines"></div>
     </div>
    <ul class="menu-items">
-    <li><a href="index.html">ART</a></li>
-    <li><a href="3D.html">3D</a></li>
-    <li><a href="motion.html">MOTION</a></li>
-    <li><a href="about.html">info</a></li>
+    <div class="col_links">
+     <li><a href="index.html">ART</a></li>
+     <li><a href="3D.html">3D</a></li>
+     <li><a href="motion.html">MOTION</a></li>
+     <li><a href="about.html">info</a></li>
+     </div>
+    <div class="socials_menu">
+     <li><a href="https://www.instagram.com/benedetto_kp/" target="_blank"><img src="img/insta_icon.png" width="40" height="auto"></a></li>
+     <li><a href="https://vimeo.com/user83968834" target="_blank"><img src="img/vimeo_icon.png" width="30" height="auto"></a></li>
+     </div>
     </ul>
-   </header>
-
+    </header>
   <section class="section hero-section">
    <div class="hero-col">
-    <h1>INNOVATION . PROBLEM SOLVING . ART</h1>
-    <p>"Benedetto Ku." focuses on mixing multiple mediums to create innovation, <br>  bringing back craftmaship and expression in art using <br> visuals  .  characters  .  design </p>
+    <!--<div class="profile_pic">
+     <img src="img/info_profile.png" width="150px" height="auto">
+     </div> -->
+    <h1> BENEDETTO KU. </h1>
+    <h1>visuals  .  characters  .  design</h1>
+    <p class="gen_info">Benedetto Ku. freelance 2D Illustrator & Animator <br>with a focus on helping clients bring their message and ideas to light , <br>  through stricking visuals, expressive character design and animation. </p>
+    <p class="message_me">For any enquiries feel free to drop me message at: </p>
 
-    <h2 class="email">benedettoku@gmail.com</h2>
+    <div class="email">
+     <!--<img src="img/email_icon.png" widht="20px" height="20px">-->
+     <h2>benedettoku@gmail.com</h2>
+     </div>
+
     <div class="timebox">
      <h2 id="UK">UK</h2>
      <h2 id="UKTime"></h2>
+     </div>
+    <!--<div class="social">
+      <h2 id="Insta"> Instagram </h2>
+      <h2 id="Insta"> Vimeo </h2>
+      <h2 id="Insta"> Twitter </h2>-->
      </div>
     </div>
    </section>

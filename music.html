@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>INFO</title>
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+
+  <style>
+   .hero-section{
+           background-image: radial-gradient(#212121 5%, transparent 2%), radial-gradient(grey 5%, transparent 2%);
+           background-color: #252424;
+           background-position: 0 0, 50px 50px;
+           background-size: 10px 10px;
+           /*filter:blur(8px);*/
+           z-index: 0;
+   }
+   .hero-col{
+          padding: clamp(1rem, 8vw, 5rem);
+          padding-bottom:0;
+          max-width: 80%;
+          font-size: 10pt;
+          display:block;
+          line-height:30px;
+   }
+
+   .section{
+          position: relative;
+          flex-direction:column;
+          height: 100vh;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items:center;
+   }
+   .section p {
+        color: #C4C3C3;
+        font-size: 1.1rem;
+        font-family: calibri;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        font-weight:100;
+    }
+   .section h1{
+          font-size:1.3rem;
+          color:white;
+          font-family:Calibri;
+          font-weight: 5;
+          letter-spacing: 2px;
+   }
+   @media (max-width:757px){
+          .hero-col{
+                max-width:100%;
+                width: clamp(300px, 50vw, 600px);
+                padding:0;
+          }
+   }
+   * {
+     margin: 0;
+     padding: 0;
+     font-size: 100%;
+     vertical-align: baseline;
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     box-sizing: border-box;
+   }
+
+   iframe{
+          height: auto;
+          position:relative;
+   }
+   </style>
+  </head>
+ <body>
+  <header class="header">
+   <div class="menu-btn">
+    <div class="menu-btn_lines"></div>
+    </div>
+   <ul class="menu-items">
+    <li><a href="index.html">ART</a></li>
+    <li><a href="3D.html">3D</a></li>
+    <li><a href="motion.html">MOTION</a></li>
+    <li><a href="music.html">MUSIC</a><li>
+    <li><a href="about.html">info</a></li>
+    </ul>
+   </header>
+
+  <section class="section hero-section">
+   <div class="hero-col">
+    <h1>INNOVATION . PROBLEM SOLVING . ART</h1>
+    <p>"Benedetto Ku." focuses on mixing multiple mediums to create innovation, <br>  bringing back craftmaship and expression in art using <br> visuals  .  characters  .  design </p>
+    </div>
+    <iframe width="70vw" height="auto" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1423365241&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-365279921" title="Benedetto Ku" target="_blank" style="color: #cccccc; text-decoration: none;">Benedetto Ku</a> · <a href="https://soundcloud.com/user-365279921/awake_sunny_boy" title="AWAKE_Sunny_Boy" target="_blank" style="color: #cccccc; text-decoration: none;">AWAKE_Sunny_Boy</a></div>
+   </section>
+   
+  <div class="grain">
+   <img src="img/grain_texture.jpg" class="grain_img" alt="grain">
+   </div>
+  </body>
+</html>
