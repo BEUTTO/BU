@@ -145,6 +145,8 @@ body{
     scrollbar-width: none;
     overflow-y:hidden;
     flex-wrap: nowrap;
+    flex-direction:row;
+    justify-content: flex-start;
 }
 .gallery::-webkit-scrollbar {
     display: none;
