@@ -48,7 +48,7 @@ body{
 
 .menu-items li a{
   padding:0.5em 1em;
-  font-family:calibri;
+  font-family:Overpass;
   transition:background 0.3s ease-in-out;
 }
 
