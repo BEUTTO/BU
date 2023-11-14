@@ -1,0 +1,7 @@
+@font-face {
+	src: url('../fonts/Calibri.woff') format('woff'),
+	     url('../fonts/Calibri.woff2') format('woff2');
+		 font-family: 'Overpass';
+		 font-style: normal;
+		 font-weight: normal;
+}
